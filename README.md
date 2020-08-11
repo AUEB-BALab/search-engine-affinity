@@ -53,7 +53,7 @@ To download the nltk vocbulary, in an `IPython` shell, run:
 
 ```python
 In [1]: import nltk
-nltk.download('punkt')
+In [2]: nltk.download('punkt')
 ```
 
 # Reproduce the results of the paper 
