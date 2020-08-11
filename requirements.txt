@@ -1,0 +1,12 @@
+nltk
+scikit-tensor-py3
+jsonschema
+requests
+numpy
+scipy
+matplotlib
+seaborn
+scikit-learn
+jellyfish
+click
+jupyter
