@@ -27,6 +27,55 @@ to the top `k` lists comparison literature and the application of
 machine learning techniques to search engine comparisons.
 
 
+The full decription of our work will appear at the proceedings of the upcoming International Conference on Web Information Systems Engineering
+([WISE 2020](http://wasp.cs.vu.nl/WISE2020/index.html)).
+
+
+# Setup
+
+Create a Python virtual environment and install the necessary
+Python packages.
+
+```bash
+virtualenv .env
+source .env/bin/activate
+pip install -r requirements.txt
+```
+
+Install the `seanlz` tool used to analyze the search engine results
+(read below for the documentation of the tool)
+
+```bash
+python setup.py install
+```
+
+To download the nltk vocbulary, in an `IPython` shell, run:
+
+```python
+In [1]: import nltk
+nltk.download('punkt')
+```
+
+# Reproduce the results of the paper 
+
+Open the notebook located in the `notebook` directory and
+run it
+
+```
+jupyter notebook notebook/evaluation.ipynb
+```
+
+the notebook first fetches the dataset used in our work,
+and then reproduces the results for each research question
+presented in the paper.
+
+We have two datasets: one for the search engine results collected in 2016
+and one for the web results collected in 2019.
+
+* 2016-results: https://pithos.okeanos.grnet.gr/public/Um13GYS9koXLg5Y6MrvBz2
+* 2019-results: https://pithos.okeanos.grnet.gr/public/RWT7pSP2OekiPHOvjtzuH7  
+
+
 # The seanlz Tool
 
 To estimate the degree of similarity between the web results of
@@ -34,27 +83,6 @@ search engines we implemented a command-line tool which computes
 the similarity with various ways. This tools takes as input the web
 results of search engines produced by multiple queries for multiple days.
 
-## Installation
-
-In a [virtualenv](http://bit.ly/2nVVhA3), install all required packages
-via pip:
-
-```console
-pip install -r requirements.txt
-```
-
-and, then install command tool:
-
-```console
-python setup.py install
-```
-
-### Dataset
-
-To get dataset used in our work, run:
-```
-wget https://pithos.okeanos.grnet.gr/public/Um13GYS9koXLg5Y6MrvBz2
-```
 
 ## Use
 
