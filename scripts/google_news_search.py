@@ -1,3 +1,17 @@
+# Copyright (c) 2016-2020 AUEB BaLab
+#
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, version 3.
+#
+# This program is distributed in the hope that it will be useful, but
+# WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+# General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with this program. If not, see <http://www.gnu.org/licenses/>.
+
 import os
 import subprocess
 import json
@@ -19,7 +33,7 @@ def mkdir_results(results_dir):
         os.makedirs(directory)
     return directory
 
-conf_file_path = '/home/user/.config.sea'
+conf_file_path = '.config.sea'
 with open(conf_file_path) as data_file:
     conf = json.load(data_file)
     news_queries = (conf['categories']['News'])
